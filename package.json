@@ -1,0 +1,35 @@
+{
+  "name": "",
+  "version": "",
+  "scripts": {
+    "build": "tsc",
+    "build:production": "npm run prestart && npm prune --production",
+    "watch": "tsc --w",
+    "prestart": "npm run build && func extensions install",
+    "start:host": "func start",
+    "start": "npm-run-all --parallel start:host watch",
+    "test": "echo \"No tests yet...\""
+  },
+  "description": "Apollo GraphQL integrated in Azure Function with Typescript.",
+  "keywords": [
+    "azure",
+    "azure-functions",
+    "graphql",
+    "apollo-server",
+    "serverless",
+    "typescript",
+    "typegraphql"
+  ],
+  "devDependencies": {
+    "@azure/functions": "^1.0.1-beta1",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "apollo-server-azure-functions": "^3.1.2",
+    "class-validator": "^0.13.1",
+    "graphql": "^15.5.1",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1"
+  }
+}
